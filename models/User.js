@@ -10,10 +10,13 @@ const userSchema = new Schema({
   bio: { type: String, required: true },
   public_repos: { type: Number, required: true },
   public_gists: { type: Number, required: true },
+  followers_url: { type: String, required: true },
+  repos_url: { type: String, required: true },
   followers: { type: Number, required: true },
   following: { type: Number, required: true },
   created_at: { type: Number, required: true },
   updated_at: { type: Number, required: true },
+  deleted: { type: Boolean, required: true },
 });
 
 module.exports = mongoose.model("User", userSchema);
